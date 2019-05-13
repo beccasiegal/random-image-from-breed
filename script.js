@@ -9,15 +9,15 @@ function getDogImage() {
    
 }
 function displayResults(responseJson) {
- // console.log(responseJson);
-  $('.results-img').replaceWith(
-    `<img src="${responseJson.message}" class="results-img">`
+ //console.log(responseJson);
+$('.images').replaceWith(
+    `<img src="${responseJson.message}">`
   )
   $('.results').removeClass('hidden');}
 
 function watchForm() {
   $('form').on('submit', event => {
-    event.preventDefault();
+   event.preventDefault();
     getDogImage();
   });
 }
